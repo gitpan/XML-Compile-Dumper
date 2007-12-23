@@ -1,0 +1,8 @@
+=== version history of XML::Compile::Dumper
+
+version 0.10:
+
+	- split-off from XML::Compile, to
+	   + reduce the number of dependencies for XML::Compile
+	   + to give Yves some time to adapt Data::Dump::Streamer to
+	     perl5.10

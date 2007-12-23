@@ -1,0 +1,10 @@
+ChangeLog
+MANIFEST
+Makefile.PL
+README
+lib/XML/Compile/Dumper.pm
+lib/XML/Compile/Dumper.pod
+t/01use.t
+t/20dump.t
+t/pod.t
+META.yml                                 Module meta-data (added by MakeMaker)
