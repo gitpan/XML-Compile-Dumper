@@ -1,9 +1,11 @@
 --- #YAML:1.0
 name:                XML-Compile-Dumper
-version:             0.10
-abstract:            remember precompiled XML processors
+version:             0.11
+abstract:            Remember precompiled XML processors
 license:             perl
-generated_by:        ExtUtils::MakeMaker version 6.36_01
+author:              
+    - Mark Overmeer
+generated_by:        ExtUtils::MakeMaker version 6.42
 distribution_type:   module
 requires:     
     Data::Dump::Streamer:          2.08
@@ -12,9 +14,8 @@ requires:
     Test::More:                    0.54
     Test::Pod:                     1.00
     XML::Compile:                  0.64
+    XML::Compile::Tester:          0.01
     XML::LibXML:                   1.63
 meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
-    version: 1.2
-author:
-    - Mark Overmeer
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3
