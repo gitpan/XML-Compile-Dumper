@@ -1,14 +1,14 @@
-# Copyrights 2007-2008 by Mark Overmeer.
+# Copyrights 2007-2010 by Mark Overmeer.
 #  For other contributors see ChangeLog.
 # See the manual pages for details on the licensing terms.
-# Pod stripped from pm file by OODoc 1.05.
+# Pod stripped from pm file by OODoc 1.06.
 
 use warnings;
 use strict;
 
 package XML::Compile::Dumper;
 use vars '$VERSION';
-$VERSION = '0.11';
+$VERSION = '0.12';
 
 
 use Log::Report 'xml-compile', syntax => 'SHORT';
@@ -87,6 +87,7 @@ package $package;
 use base 'Exporter';
 
 use XML::LibXML   ();
+use Log::Report;
 
 our \@EXPORT;
 __HEADER
