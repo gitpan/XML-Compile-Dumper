@@ -1,6 +1,12 @@
 === version history of XML::Compile::Dumper
 All changes made by Mark Overmeer, unless explicitly noted differently.
 
+version 0.13: Fri Mar 26 11:14:56 CET 2010
+
+	Fix:
+
+	- name of test file in MANIFEST
+
 version 0.12: Fri Mar 26 10:14:04 CET 2010
 
 	Fixes:
