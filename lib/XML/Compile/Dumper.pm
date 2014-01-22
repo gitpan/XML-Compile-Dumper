@@ -1,14 +1,13 @@
-# Copyrights 2007-2010 by Mark Overmeer.
+# Copyrights 2007-2014 by [Mark Overmeer].
 #  For other contributors see ChangeLog.
 # See the manual pages for details on the licensing terms.
-# Pod stripped from pm file by OODoc 1.06.
+# Pod stripped from pm file by OODoc 2.01.
 
 use warnings;
 use strict;
 
 package XML::Compile::Dumper;
-use vars '$VERSION';
-$VERSION = '0.13';
+our $VERSION = '0.14';
 
 
 use Log::Report 'xml-compile', syntax => 'SHORT';
@@ -70,10 +69,12 @@ sub header($$)
     my $date = asctime localtime;
     $date =~ s/\n.*//;
 
+    my $xc_version = $XML::Compile::VERSION || '(devel)';
+
     $fh->print( <<__HEADER );
 #crash
 # This module has been generated using
-#    XML::Compile         $XML::Compile::VERSION
+#    XML::Compile         $xc_version
 #    Data::Dump::Streamer $Data::Dump::Streamer::VERSION
 # Created with a script
 #    named $0
@@ -88,8 +89,24 @@ use base 'Exporter';
 
 use XML::LibXML   ();
 use Log::Report;
+use Data::Dump::Streamer ':undump';
 
 our \@EXPORT;
+
+ # We will need these modules
+ { package XML::Compile::Translate::Reader;
+   use Log::Report;
+
+ ; package XML::Compile::Translate::Writer;
+   use Log::Report;
+
+ ; package XML::Compile::Transport::SOAPHTTP;
+   use Log::Report;
+
+ ; package XML::Compile::Transport;
+   use Log::Report;
+ }
+
 __HEADER
 }
 

@@ -4,7 +4,7 @@ use 5.008;
 
 WriteMakefile
  ( NAME	 	=> 'XML::Compile::Dumper'
- , VERSION	=> '0.13'
+ , VERSION	=> '0.14'
  , PREREQ_PM    =>
    { XML::LibXML               => 1.63
    , Data::Dump::Streamer      => 2.08
